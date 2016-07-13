@@ -1,6 +1,6 @@
 {
   "name": "webcomponentsjs-custom-element-v0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is the v0 branch of CustomElements from the webcomponentsjs project.",
   "main": "CustomElements.js",
   "scripts": {
