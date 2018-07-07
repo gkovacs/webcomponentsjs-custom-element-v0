@@ -7,7 +7,7 @@
  * Code distributed by Google as part of the polymer project is also
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
-// @version 0.7.22
+// @version 0.7.24
 if (typeof WeakMap === "undefined") {
   (function() {
     var defineProperty = Object.defineProperty;
@@ -351,7 +351,7 @@ if (typeof WeakMap === "undefined") {
 
 (function(scope) {
   "use strict";
-  if (!window.performance) {
+  if (!(window.performance && window.performance.now)) {
     var start = Date.now();
     window.performance = {
       now: function() {
@@ -772,8 +772,7 @@ window.CustomElements.addModule(function(scope) {
       throw new Error("Failed to execute 'registerElement' on 'Document': Registration failed for type '" + String(name) + "'. The type name is invalid.");
     }
     if (getRegisteredDefinition(name)) {
-      //throw new Error("DuplicateDefinitionError: a type with name '" + String(name) + "' is already registered");
-      return;
+      throw new Error("DuplicateDefinitionError: a type with name '" + String(name) + "' is already registered");
     }
     if (!definition.prototype) {
       definition.prototype = Object.create(HTMLElement.prototype);

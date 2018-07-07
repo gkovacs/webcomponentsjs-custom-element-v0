@@ -21,4 +21,4 @@ require('webcomponentsjs-custom-element-v0')
 
 ## Source
 
-This is taken from the 0.7.22 release of the [webcomponents.js](https://www.npmjs.com/package/webcomponents.js) npm package.
+This is taken from the 0.7.24 release of the [webcomponents.js](https://www.npmjs.com/package/webcomponents.js) npm package.
